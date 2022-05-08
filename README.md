@@ -1,3 +1,3 @@
-# goit-markup-hw-06
+# goit-markup-hw-07
 
-HTML CSS HW 6
+HTML CSS HW 7
