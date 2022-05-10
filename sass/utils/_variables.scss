@@ -7,6 +7,7 @@ $accentColor: #2196f3;
 
 $timeFunction: cubic-bezier(0.4, 0, 0.2, 1);
 
+$iconsFeatures: 'satellite', 'clock', 'diagram', 'astronaut';
 
 body {
   color: $primaryTextColor;
@@ -60,6 +61,18 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.footer-subtitles {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primaryBgColor;
 }
 
 h1,

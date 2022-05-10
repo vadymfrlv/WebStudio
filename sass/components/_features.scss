@@ -24,29 +24,27 @@
   background-color: $secondaryBgColor;
 }
 
-// $iconsFeatures: 'satellite', 'clock', 'diagram', 'astronaut';
+@each $icon in $iconsFeatures {
+  .features__icon-#{$icon}::before {
+    background-image: url('.././images/#{$icon}.svg');
+  }
+}
 
-// @each $iconName in $iconsFeatures {
-//   .features__icon-#{$iconName}::before {
-//     background-image: url('../images/#{iconName}.svg');
-//   }
+// .features__icon-satellite::before {
+//   background-image: url('.././images/satellite.svg');
 // }
 
-.features__icon-satellite::before {
-  background-image: url('.././images/satellite.svg');
-}
+// .features__icon-clock::before {
+//   background-image: url('.././images/clock.svg');
+// }
 
-.features__icon-clock::before {
-  background-image: url('.././images/clock.svg');
-}
+// .features__icon-diagram::before {
+//   background-image: url('.././images/diagram.svg');
+// }
 
-.features__icon-diagram::before {
-  background-image: url('.././images/diagram.svg');
-}
-
-.features__icon-astronaut::before {
-  background-image: url('.././images/astronaut.svg');
-}
+// .features__icon-astronaut::before {
+//   background-image: url('.././images/astronaut.svg');
+// }
 
 .features__name {
   margin-bottom: 10px;

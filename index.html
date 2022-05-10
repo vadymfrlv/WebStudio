@@ -92,20 +92,20 @@
           <li class="work__item">
             <img src="./images/img-1.jpg" alt="Разработка мобильного приложения набирая код на клавиатуре" width="370"
               height="294" />
-            <div class="work__item-position">
+            <div class="work__item-container">
               <p class="work__item-text">Десктопные приложения</p>
             </div>
           </li>
           <li class="work__item">
             <img src="./images/img-2.jpg" alt="Человек держит в руках смартфон сидя за ноутбуком" width="370"
               height="294" />
-            <div class="work__item-position">
+            <div class="work__item-container">
               <p class="work__item-text">Мобильные приложения</p>
             </div>
           </li>
           <li class="work__item">
             <img src="./images/img-3.jpg" alt="Выбор цвета на планшете в цветовой палитре" width="370" height="294" />
-            <div class="work__item-position">
+            <div class="work__item-container">
               <p class="work__item-text">Дизайнерские решения</p>
             </div>
           </li>
@@ -122,8 +122,8 @@
             <img src="./images/imgteam-1.jpg" alt="" width="270" height="260" />
             <div class="team-card">
               <h3 class="team-card__name">Игорь Демьяненко</h3>
-              <p class="team-card__text" lang="en">Product Designer</p>
-              <ul class="team-card__social-list team-card__social-links list">
+              <p class="team-card__position" lang="en">Product Designer</p>
+              <ul class="team-card__social-list list">
                 <li class="team-card__social-item">
                   <a class="team-card__social-link" href="">
                     <svg class="team-card__social-icon" width="20px" height="20px">
@@ -159,8 +159,8 @@
             <img src="./images/imgteam-2.jpg" alt="" width="270" height="260" />
             <div class="team-card">
               <h3 class="team-card__name">Ольга Репина</h3>
-              <p class="team-card__text" lang="en">Frontend Developer</p>
-              <ul class="team-social team-social-links list">
+              <p class="team-card__position" lang="en">Frontend Developer</p>
+              <ul class="team-card__social-list team-social-links list">
                 <li class="team-card__social-item">
                   <a class="team-card__social-link" href="">
                     <svg class="team-card__social-icon" width="20px" height="20px">
@@ -196,8 +196,8 @@
             <img src="./images/imgteam-3.jpg" alt="" width="270" height="260" />
             <div class="team-card">
               <h3 class="team-card__name">Николай Тарасов</h3>
-              <p class="team-card__text" lang="en">Marketing</p>
-              <ul class="team-social team-social-links list">
+              <p class="team-card__position" lang="en">Marketing</p>
+              <ul class="team-card__social-list team-social-links list">
                 <li class="team-card__social-item">
                   <a class="team-card__social-link" href="">
                     <svg class="team-card__social-icon" width="20px" height="20px">
@@ -233,8 +233,8 @@
             <img src="./images/imgteam-4.jpg" alt="" width="270" height="260" />
             <div class="team-card">
               <h3 class="team-card__name">Михаил Ермаков</h3>
-              <p class="team-card__text" lang="en">UI Designer</p>
-              <ul class="team-social team-social-links list">
+              <p class="team-card__position" lang="en">UI Designer</p>
+              <ul class="team-card__social-list team-social-links list">
                 <li class="team-card__social-item">
                   <a class="team-card__social-link" href="">
                     <svg class="team-card__social-icon" width="20px" height="20px">
@@ -296,14 +296,14 @@
               </svg>
             </a>
           </li>
-          <li class="client">
+          <li class="clients__item">
             <a class="clients__link" href="">
               <svg class="clients__icon" width="106px" height="60px">
                 <use href="./images/sprite.svg#logoclient-4"></use>
               </svg>
             </a>
           </li>
-          <li class="client">
+          <li class="clients__item">
             <a class="clients__link" href="">
               <svg class="clients__icon" width="106px" height="60px">
                 <use href="./images/sprite.svg#logoclient-5"></use>
@@ -324,11 +324,11 @@
 
   <!-- Футер -->
   <footer class="footer">
-    <div class="container">
+    <div class="footer_container container">
       <div class="footer__contacts-group">
-        <a class="logo logo--inverse" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
+        <a class="footer__logo logo logo--inverse" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
         <address class="footer__contacts">
-          <ul class="footer__contacts-list">
+          <ul class="footer__contacts-list list">
             <li class="footer__contacts-item">
               <a class="footer__contacts-location" href="https://bit.ly/3pXMvUd" target="_blank"
                 rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
@@ -344,7 +344,7 @@
       </div>
 
       <div class="join">
-        <h3 class="join__title">Присоединяйтесь</h3>
+        <h3 class="footer-subtitles">Присоединяйтесь</h3>
         <ul class="join__list list">
           <li class="join__item">
             <a class="join__link" href="">
@@ -378,7 +378,7 @@
       </div>
 
       <div class="subscribe">
-        <h3 class="subscribe__title">Подпишитесь на рассылку</h3>
+        <h3 class="footer-subtitles">Подпишитесь на рассылку</h3>
         <form class="subscribe__form" autocomplete="off">
           <label class="subscribe__form-field">
             <input class="subscribe__form-input" type="email" name="mail" placeholder="E-mail" />
