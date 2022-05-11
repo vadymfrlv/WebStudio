@@ -50,7 +50,7 @@
     <!-- Герой -->
     <section class="hero">
       <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-      <button class="hero__button button" type="button" data-modal-open>Заказать услугу</button>
+      <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
     </section>
 
     <!-- Наши преимущества -->
@@ -326,7 +326,7 @@
   <footer class="footer">
     <div class="footer_container container">
       <div class="footer__contacts-group">
-        <a class="footer__logo logo logo--inverse" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
+        <a class="logo footer__logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
         <address class="footer__contacts">
           <ul class="footer__contacts-list list">
             <li class="footer__contacts-item">
@@ -383,7 +383,7 @@
           <label class="subscribe__form-field">
             <input class="subscribe__form-input" type="email" name="mail" placeholder="E-mail" />
           </label>
-          <button class="subscribe__form-button button" type="submit">Подписаться</button>
+          <button class="subscribe__form-button" type="submit">Подписаться</button>
         </form>
       </div>
     </div>
@@ -391,38 +391,38 @@
 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal--closed" type="" data-modal-close>
+      <button class="modal__close-icon" type="" data-modal-close>
         <svg width="18px" height="18px">
           <use href="./images/sprite.svg#close"></use>
         </svg>
       </button>
 
-      <form class="modal-form">
-        <h3 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h3>
-        <div class="modal-form__field">
-          <label class="modal-form__label" for="name">Имя</label>
-          <input class="modal-form__input" type="name" name="name" id="name" />
-          <svg class="modal-form__icon" width="18px" height="18px">
+      <form class="modal__form">
+        <h3 class="modal__title">Оставьте свои данные, мы вам перезвоним</h3>
+        <div class="modal__field">
+          <label class="modal__label" for="name">Имя</label>
+          <input class="modal__input" type="name" name="name" id="name" />
+          <svg class="modal__icon" width="18px" height="18px">
             <use href="./images/sprite.svg#name"></use>
           </svg>
         </div>
-        <div class="modal-form__field">
-          <label class="modal-form__label" for="tel">Телефон</label>
-          <input class="modal-form__input" type="tel" name="tel" id="tel" />
-          <svg class="modal-form__icon" width="18px" height="18px">
+        <div class="modal__field">
+          <label class="modal__label" for="tel">Телефон</label>
+          <input class="modal__input" type="tel" name="tel" id="tel" />
+          <svg class="modal__icon" width="18px" height="18px">
             <use href="./images/sprite.svg#tel"></use>
           </svg>
         </div>
-        <div class="modal-form__field">
-          <label class="modal-form__label" for="email">Почта</label>
-          <input class="modal-form__input" type="email" name="email" id="email" />
-          <svg class="modal-form__icon" width="18px" height="18px">
+        <div class="modal__field">
+          <label class="modal__label" for="email">Почта</label>
+          <input class="modal__input" type="email" name="email" id="email" />
+          <svg class="modal__icon" width="18px" height="18px">
             <use href="./images/sprite.svg#email"></use>
           </svg>
         </div>
-        <div class="modal-form__field comment">
-          <label class="modal-form__label" for="comment">Комментарий</label>
-          <textarea class="modal-form__comment" type="text" name="comment" id="comment"
+        <div class="modal__comment">
+          <label class="modal__label" for="comment">Комментарий</label>
+          <textarea class="modal__comment-textarea" type="text" name="comment" id="comment"
             placeholder="Введите текст"></textarea>
         </div>
         <div class="checkbox">
@@ -433,12 +433,13 @@
                 <use href="./images/sprite.svg#check"></use>
               </svg>
             </span>
-            <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю<a class="policy-link" href="">Условия
+            <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю&nbsp;<a class="checkbox__link"
+                href="">Условия
                 договора</a>
             </span>
           </label>
         </div>
-        <button class="modal__submit button" type="submit">Отправить</button>
+        <button class="modal__submit" type="submit">Отправить</button>
       </form>
     </div>
   </div>

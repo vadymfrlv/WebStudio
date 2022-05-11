@@ -29,6 +29,7 @@
 }
 
 .hero__button {
+  @extend %button;
   padding: 10px 32px;
   min-width: 200px;
 
