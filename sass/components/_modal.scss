@@ -117,6 +117,11 @@
   &:focus {
     border-color: $accentColor;
   }
+
+  &:hover + .modal__icon,
+  &:focus + .modal__icon {
+    fill: $accentColor;
+  }
 }
 
 .modal__icon {
@@ -128,10 +133,11 @@
   cursor: pointer;
   transition: fill 250ms $timeFunction;
 
-  .modal__field:hover &,
-  .modal__field:focus & {
-    fill: $accentColor;
-  }
+  // не может работать поскольку input не в lable
+  // .modal__input:hover &,
+  // .modal__input:focus & {
+  //   fill: $accentColor;
+  // }
 }
 
 .modal__comment {
@@ -195,10 +201,10 @@
     background-color: $accentColor;
   }
 
-  // &:hover + .checkbox__area,
-  // &:focus + .checkbox__area {
-  //   border: 2px solid $accentColor;
-  // }
+  &:hover + .checkbox__area,
+  &:focus + .checkbox__area {
+    border: 2px solid $accentColor;
+  }
 }
 
 .checkbox__area {
@@ -210,11 +216,6 @@
   border: 2px solid $titleTextColor;
 
   border-radius: 2px;
-
-  .checkbox__lable:hover &,
-  .checkbox__lable:focus & {
-    border: 2px solid $accentColor;
-  }
 }
 
 .checkbox__icon {
