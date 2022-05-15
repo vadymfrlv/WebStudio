@@ -3,9 +3,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  @media screen and (min-width: $desktop) {
-  }
 }
 
 .features__item {
@@ -28,7 +25,7 @@
   }
 
   &:nth-last-child(-n + 2) {
-    @media screen and (max-width: $tabletBreakpoint) {
+    @media screen and (min-width: $tablet) and (max-width: $tabletBreakpoint) {
       margin-bottom: 0;
     }
   }
