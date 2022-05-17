@@ -1,12 +1,12 @@
-body {
-  color: $primaryTextColor;
-  background-color: $primaryBgColor;
+// body {
+//   color: $primaryTextColor;
+//   background-color: $primaryBgColor;
 
-  font-family: $primaryFont;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
+//   font-family: $primaryFont;
+//   font-size: 14px;
+//   line-height: 1.71;
+//   letter-spacing: 0.03em;
+// }
 
 .container {
   width: 100%;
@@ -14,7 +14,7 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
+  // outline: 2px solid tomato;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
