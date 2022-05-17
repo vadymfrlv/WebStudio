@@ -17,9 +17,9 @@
   pointer-events: none;
 }
 
-// .backdrop.is-hidden .modal {
-//   transform: translate(-50%, -50%) scale(1.1);
-// }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
 
 .modal {
   position: absolute;
