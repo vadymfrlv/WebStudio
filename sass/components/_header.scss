@@ -1,38 +1,144 @@
 .header {
-  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
+// .header__container {
+//   @media screen and (max-width: 767px) {
+//     position: relative;
+//     padding-top: 16px;
+//     padding-bottom: 16px;
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     display: flex;
+//     align-items: center;
+//   }
+// }
+
 .header__container,
 .header__main-nav {
-  display: flex;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 3;
+
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  fill: #000000;
+  cursor: pointer;
+  background-color: transparent;
+  transition: fill 250ms $timeFunction;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+
+.mobile__close {
+  display: none;
+
+  .header__menu-button.is-open & {
+    display: block;
+  }
+}
+
+.header__menu-button.is-open .mobile__open {
+  display: none;
+}
+
+.header__menu-thumb {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+
+    top: 0px;
+    left: 0;
+    height: 100vh;
+    padding: 48px 40px;
+
+    background-color: $primaryBgColor;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__nav-list {
-  display: flex;
-  margin-left: 93px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 93px;
+  }
 }
 
 .header__item:not(:last-child) {
-  margin-right: 50px;
+  position: relative;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .header__link {
   position: relative;
+  display: inline-block;
 
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: $titleTextColor;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 
+  color: $titleTextColor;
   transition: color 250ms $timeFunction;
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &:hover,
   &:focus {
@@ -45,9 +151,8 @@
 
   &::after {
     content: '';
-
     position: absolute;
-    bottom: -1px;
+    bottom: -3px;
 
     display: block;
     width: 100%;
@@ -55,29 +160,85 @@
     border-radius: 2px;
 
     background-color: $accentColor;
+
+    @media screen and (min-width: $tablet) {
+      bottom: -1px;
+    }
+  }
+}
+
+.header__cont-container {
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
   }
 }
 
 .header__cont-list {
-  display: flex;
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
 }
 
-.header__cont-item:not(:last-child) {
-  margin-right: 30px;
+.header__cont-item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-top: 32px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+
+  &:last-child {
+    @media screen and (min-width: $tablet) {
+      margin-top: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 
-.header__contact-link {
+.header__cont-link {
   display: flex;
+  align-items: center;
 
-  color: $primaryTextColor;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 
+  color: $primaryTextColor;
   transition: color 250ms $timeFunction;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &:hover,
   &:focus {
@@ -85,16 +246,104 @@
   }
 }
 
+.cont-link--mail {
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 1.17;
+
+    color: $primaryTextColor;
+  }
+}
+
+.cont-link--phone {
+  @media screen and (max-width: 767px) {
+    font-size: 34px;
+    line-height: 1.18;
+
+    color: $accentColor;
+  }
+}
+
 .header__mail-icon {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
+
   fill: currentColor;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
 }
 
 .header__phone-icon {
   width: 10px;
   height: 16px;
-  margin-right: 10px;
+
   fill: currentColor;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
+}
+
+.header__socail-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.header__socail-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    display: block;
+
+    width: 2px;
+    height: 22px;
+    right: -10px;
+    bottom: 0;
+
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.header__socail-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  color: $accentColor;
+  transition: color 250ms $timeFunction;
+
+  &:hover,
+  &:focus {
+    color: #188ce8;
+  }
 }
