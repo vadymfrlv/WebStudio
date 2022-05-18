@@ -18,32 +18,49 @@
   <!-- Шапка -->
   <header class="header">
     <div class="header__container container">
-      <nav class="header__main-nav">
-        <a class="logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
-        <ul class="header__nav-list list">
-          <li class="header__item"><a class="header__link" href="./index.html">Студия</a></li>
-          <li class="header__item"><a class="header__link header__link--current" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="header__item"><a class="header__link" href="">Контакты</a></li>
-        </ul>
-      </nav>
-      <ul class="header__cont-list list">
-        <li class="header__cont-item">
-          <a class="header__contact-link" href="mailto:info@devstudio.com">
-            <svg class="header__mail-icon" with="16px" height="12px">
-              <use href="./images/sprite.svg#envelope"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
-        <li class="header__cont-item">
-          <a class="header__contact-link" href="tel:+380961111111">
-            <svg class="header__phone-icon" with="10px" height="16px">
-              <use href="./images/sprite.svg#smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </li>
-      </ul>
+      <a class="logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
+      <button class="header__menu-button" type="button" aria-expanded="false" aria-controls="menu-container"
+        data-menu-button>
+        <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+          <use class="mobile__open" href="./images/sprite.svg#mobopen"></use>
+          <use class="mobile__close" href="./images/sprite.svg#mobclose"></use>
+        </svg>
+      </button>
+      <div class="header__menu-thumb" id="menu-container" data-menu>
+        <nav class="header__main-nav">
+          <ul class="header__nav-list list">
+            <li class="header__item"><a class="header__link" href="./index.html">Студия</a></li>
+            <li class="header__item"><a class="header__link header__link--current" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="header__item"><a class="header__link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header__cont-container">
+          <ul class="header__cont-list list">
+            <li class="header__cont-item">
+              <a class="header__cont-link cont-link--mail" href="mailto:info@devstudio.com">
+                <svg class="header__mail-icon" with="16px" height="12px">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+            <li class="header__cont-item">
+              <a class="header__cont-link cont-link--phone" href="tel:+380961111111">
+                <svg class="header__phone-icon" with="10px" height="16px">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+          <ul class="header__socail-list list">
+            <li class="header__socail-item"><a class="header__socail-link" href="">Instagram</a></li>
+            <li class="header__socail-item"><a class="header__socail-link" href="">Twitter</a></li>
+            <li class="header__socail-item"><a class="header__socail-link" href="">Facebook</a></li>
+            <li class="header__socail-item"><a class="header__socail-link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -85,7 +102,8 @@
                   <source
                     srcset="./images/portfolio/kryack/kryack-mob-1x.jpg 1x, ./images/portfolio/kryack/kryack-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/kryack/kryack-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/kryack/kryack-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -113,7 +131,8 @@
                   <source
                     srcset="./images/portfolio/poster/poster-mob-1x.jpg 1x, ./images/portfolio/poster/poster-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/poster/poster-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/poster/poster-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -143,7 +162,8 @@
                   <source
                     srcset="./images/portfolio/restaurant/restaurant-mob-1x.jpg 1x, ./images/portfolio/restaurant/restaurant-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/restaurant/restaurant-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/restaurant/restaurant-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -171,7 +191,8 @@
                   <source
                     srcset="./images/portfolio/prime/prime-mob-1x.jpg 1x, ./images/portfolio/prime/prime-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/prime/prime-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/prime/prime-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -199,7 +220,8 @@
                   <source
                     srcset="./images/portfolio/boxes/boxes-mob-1x.jpg 1x, ./images/portfolio/boxes/boxes-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/boxes/prime-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/boxes/prime-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -227,7 +249,8 @@
                   <source
                     srcset="./images/portfolio/inspiration/inspiration-mob-1x.jpg 1x, ./images/portfolio/inspiration/inspiration-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/inspiration/prime-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/inspiration/prime-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -255,7 +278,8 @@
                   <source
                     srcset="./images/portfolio/limedition/limedition-mob-1x.jpg 1x, ./images/portfolio/limedition/limedition-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/limedition/prime-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/limedition/prime-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -280,7 +304,8 @@
                     media="(min-width:768px)" type="image/jpeg" />
                   <source srcset="./images/portfolio/lab/lab-mob-1x.jpg 1x, ./images/portfolio/lab/lab-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/lab/prime-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/lab/prime-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -308,7 +333,8 @@
                   <source
                     srcset="./images/portfolio/growbusiness/growbusiness-mob-1x.jpg 1x, ./images/portfolio/growbusiness/growbusiness-mob-2x.jpg 2x"
                     media="(max-width:767px)" type="image/jpeg" />
-                  <img src="./images/portfolio/growbusiness/prime-mob-1x.jpg" alt="изображение продукта" />
+                  <img src="./images/portfolio/growbusiness/prime-mob-1x.jpg" width="450px" height="294px"
+                    alt="изображение продукта" />
                 </picture>
                 <div class="portfolio-cards__layout">
                   <p class="portfolio-cards__layout-text">
@@ -394,6 +420,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
