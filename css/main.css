@@ -697,16 +697,6 @@ body.modal-open {
   }
 }
 
-.features__text {
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .features__text {
-    text-align: left;
-  }
-}
-
 .work {
   padding-top: 0px;
 }
